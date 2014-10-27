@@ -1,0 +1,43 @@
+STACK FUNCTIONALITY (Array implementation)
+
+Struct Stack: 
+1. int top (points to the next spot for an element to be added)
+2. array[setsize] (setsize is a fixed number, array holds all data values in the stack)
+
+Methods to implement:
+
+1. empty()
+
+   Function Prototype: bool empty()
+   Functionality: returns true if the stack is empty, false otherwise
+   Actual Implementation:
+2. size()
+
+   Function Prototype: int size()
+   Functionality: returns the size(an integer) of the stack
+   Actual Implementation:
+
+3. top()
+
+   Function Prototype: int top()
+   Functionality: returns the top element(an integer) of the stack
+   Actual Implementation:
+
+4. push()
+
+   Function Prototype: void push(int)
+   Functionality: adds an element(an integer) to the top of the stack
+   Actual Implementation:
+
+5. pop()
+
+   Function Prototype: int pop()
+   Functionality: returns the element(an integer) at the top of the stack
+   Actual Implementation:
+
+6. swap()
+
+   Function Prototype: void swap(stack&)
+   Functionality: swaps a stacks values with the other stacks values
+   Actual Implementation:
+
