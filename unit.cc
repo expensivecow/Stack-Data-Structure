@@ -10,9 +10,7 @@ Unit::~Unit() {
 
 void Unit::assertEquals(std::string msg, int expected, int actual) {
 	if (expected != actual) {
-		std::stringstream fmt;
-		fmt << msg << ": Expected <" << expected << "> but was <" << actual << ">";
-		failures.push_back(fmt.str());
+	  std::cout << msg << " :" << " Expected " << expected << " got " << actual << std::endl;
 	}
 }
 

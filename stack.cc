@@ -4,9 +4,49 @@
  */
 
 #include <iostream>
+#include "unit.h"
+#include <sstream>
 
-int main(void) {
-  std::cout << "Will implement this very soon" << std::endl;
+#define SETSIZE 10
+
+typedef int Index;
+
+struct Stack{
+  Index top;
+  int arr[SETSIZE];
+};
+
+bool empty(int arr[]) {
+  return false;
+}
+
+int size(int arr[]) {
   return 0;
 }
 
+int top(int arr[]) {
+  return 0;
+}
+
+void push(int Value) {
+  return;
+}
+
+int pop() {
+  return 0;
+}
+
+void runTests() {
+  //TODO: implement test cases
+  Unit unit;
+  unit.assertEquals("Failure",pop(),2);
+}
+
+int main(int argc, char *argv[]) {
+    if(argc == 1) {
+      runTests();
+    } else {
+      std::cout << "TO IMPLEMENT LATER" << std::endl;
+    }
+    return 0;
+}
