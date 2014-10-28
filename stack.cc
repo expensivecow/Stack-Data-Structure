@@ -4,49 +4,37 @@
  */
 
 #include <iostream>
-#include "unit.h"
-#include <sstream>
+#include "stack.h"
 
-#define SETSIZE 10
+myStack::myStack() {
+  int* p = new int[10];
+  for(int i = 0; i<10; i++) {
+    p[i] = 0; //initialize all p to 0
+  }
+  int topIndex = 0;
+}
 
-typedef int Index;
-
-struct Stack{
-  Index top;
-  int arr[SETSIZE];
-};
-
-bool empty(int arr[]) {
+bool myStack::empty(int arr[]) {
   return false;
 }
 
-int size(int arr[]) {
+int myStack::size(int arr[]) {
   return 0;
 }
 
-int top(int arr[]) {
+int myStack::top(int arr[]) {
   return 0;
 }
 
-void push(int Value) {
+void myStack::push(int Val) {
   return;
 }
 
-int pop() {
-  return 0;
+int myStack::pop() {
+  return 1;
 }
 
-void runTests() {
-  //TODO: implement test cases
-  Unit unit;
-  unit.assertEquals("Failure",pop(),2);
+void myStack::reSize() {
+  return;
 }
 
-int main(int argc, char *argv[]) {
-    if(argc == 1) {
-      runTests();
-    } else {
-      std::cout << "TO IMPLEMENT LATER" << std::endl;
-    }
-    return 0;
-}

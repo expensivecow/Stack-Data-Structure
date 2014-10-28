@@ -19,3 +19,5 @@ Recreating a fully functional stack using C++ from scratch that resembles the C+
 ## References
 
 * [http://www.cplusplus.com/reference/stack/stack/](http://www.cplusplus.com/reference/stack/stack/)
+* [http://www.cplusplus.com/doc/tutorial/classes/](http://www.cplusplus.com/doc/tutorial/classes/)
+* [http://www.cplusplus.com/forum/articles/10627/](http://www.cplusplus.com/forum/articles/10627/)
