@@ -1,20 +1,21 @@
 /* File: Stack.h
- * Goal: Create and implement Stack functionality
+ * Goal: Create and implement Stack functionality (creates a stack class)
  * Date: October 28, 2014
- *
  */
 
 class myStack {
 public:
-  myStack(int, int);
+  myStack(int, int); //constructor
 
   bool empty(int[]);
   int size(int[]);
   int top();
   void push(int);
   int pop();
-  void reSize();
-
+  void reSize(int);
+  void displayStack();
+  int getMaxSize();
+  
 private:
   int* p;
   int topIndex;

@@ -10,6 +10,7 @@ For each function:
 4. push()
 5. pop()
 6. swap()
+7. displayStack()
 
 Order of implementation:
 
@@ -53,8 +54,8 @@ When push() is implemented add the following test cases:
 
 When pop() is implemented add the following test cases:
 
-1. pop() on an empty array should still have an empty array
-2. pop() on [3,2,1,3,5,2,4] should be [3,2,1,3,5,2] after pop() 
+1. pop() on an empty array should still have an empty array and return 0
+2. pop() on [3,2,1,3,5,2,4] should be [3,2,1,3,5,2] after pop() and return 4 
 
 When swap() is implemented add the following test cases:
 

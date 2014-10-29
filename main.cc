@@ -6,13 +6,13 @@
 #include <iostream>
 #include "unit.h"
 #include "stack.h"
-#include <sstream>
 
 void runTests() {
-  myStack mystack (0,10);
+  myStack mystack (0,1);
   mystack.push(1);
   mystack.push(2);
-  std::cout << mystack.top() << std::endl;
+  mystack.push(3);
+  mystack.displayStack();
   return;
 }
 
