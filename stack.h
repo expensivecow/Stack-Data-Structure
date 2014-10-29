@@ -5,13 +5,18 @@
  */
 
 class myStack {
- int topIndex;
- public:
-  myStack(void);
+public:
+  myStack(int, int);
+
   bool empty(int[]);
   int size(int[]);
-  int top(int[]);
+  int top();
   void push(int);
-  int pop(void);
-  void reSize(void);
+  int pop();
+  void reSize();
+
+private:
+  int* p;
+  int topIndex;
+  int maxSize;
 };

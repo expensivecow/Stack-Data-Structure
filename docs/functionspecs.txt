@@ -3,6 +3,7 @@ STACK FUNCTIONALITY (Array implementation)
 Struct of Stack: 
 1. int top (points to the next spot for an element to be added)
 2. array[setsize] (setsize is a fixed number, array holds all data values in the stack)
+3. maxSize (denotes maximum length before you have to increase the size dynamically)
 
 Methods to implement:
 

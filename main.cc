@@ -9,7 +9,10 @@
 #include <sstream>
 
 void runTests() {
-  myStack mystack;
+  myStack mystack (0,10);
+  mystack.push(1);
+  mystack.push(2);
+  std::cout << mystack.top() << std::endl;
   return;
 }
 

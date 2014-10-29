@@ -6,12 +6,11 @@
 #include <iostream>
 #include "stack.h"
 
-myStack::myStack() {
-  int* p = new int[10];
-  for(int i = 0; i<10; i++) {
-    p[i] = 0; //initialize all p to 0
-  }
-  int topIndex = 0;
+myStack::myStack(int startingTop, int startingLength) {
+  topIndex = startingTop;
+  maxSize = startingLength;
+  p = new int[startingLength];
+  return;
 }
 
 bool myStack::empty(int arr[]) {
@@ -22,11 +21,13 @@ int myStack::size(int arr[]) {
   return 0;
 }
 
-int myStack::top(int arr[]) {
-  return 0;
+int myStack::top() {
+  return topIndex;
 }
 
-void myStack::push(int Val) {
+void myStack::push(int val) {
+  p[topIndex] = val;
+  topIndex++;
   return;
 }
 
