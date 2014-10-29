@@ -1,7 +1,7 @@
 STACK FUNCTIONALITY (Array implementation)
 
 Struct of Stack: 
-1. int top (points to the next spot for an element to be added)
+1. int topIndex (points to the next spot for an element to be added)
 2. array[setsize] (setsize is a fixed number, array holds all data values in the stack)
 3. maxSize (denotes maximum length before you have to increase the size dynamically)
 
@@ -10,36 +10,69 @@ Methods to implement:
 1. empty()
 
    Function Prototype: bool empty()
-   Functionality: returns true if the stack is empty, false otherwise
-   Actual Implementation:
+  
+   Functionality: Returns true if the stack is empty, false otherwise
+   Actual Implementation: If topIndex is zero, that means the stack is empty.
 
 2. size()
 
    Function Prototype: int size()
-   Functionality: returns the size(an integer) of the stack
-   Actual Implementation:
+  
+   Functionality: Returns the size(an integer) of the stack
+   Actual Implementation: Returns topIndex (topIndex holds number of elements in the stack)
 
 3. top()
 
    Function Prototype: int top()
-   Functionality: returns the top element(an integer) of the stack
-   Actual Implementation:
+  
+   Functionality: Returns the top element(an integer) of the stack
+  
+   Actual Implementation: Returns p[topIndex], which is the element added last
 
 4. push()
 
    Function Prototype: void push(int)
-   Functionality: adds an element(an integer) to the top of the stack
-   Actual Implementation:
+  
+   Functionality: Adds an element(an integer) to the top of the stack
+  
+   Actual Implementation: Checks whether theres enough space(topIndex < maxSize), if there isnt space dynamically allocate 2x the maxSize else add element to p[topIndex] and increment topIndex (update it).
 
 5. pop()
 
    Function Prototype: int pop()
-   Functionality: returns the element(an integer) at the top of the stack
-   Actual Implementation:
+   
+   Functionality: Returns the element(an integer) at the top of the stack
+  
+   Actual Implementation: if topIndex is 0, stack is empty and so return 0 by default (print something to indicate it is empty), otherwise retrieve p[topIndex] and decrement topIndex (to update it).
+
+6. reSize()
+
+   Function Prototype: void reSize(int)
+  
+   Functionality: Dynamically increase the memory of array so more elements can be added
+  
+   Actual Implementation: Set a temporary pointer to the original node. Use new to allocate a new memory spot with twice as much maxSize. replicate all data from old pointer and free memory from old pointer. set old pointer to null otherwise things will break ): . 
+
+7. displayStack()
+
+   Function Prototype: void displayStack()
+ 
+   Functionality: Provide a user display to show what is in the stack from bottom to top
+ 
+   Actual Implementation: Create a string using iteration to go through i=topIndex nodes and print them to a string.
+
+8. getMaxSize() 
+
+   Function Prototype: int getMaxSize()
+
+   Functionality: Returns max length of stack possible for testing purposes
+
+   Actual Implementation: Return maxSize
 
 6. swap()
 
    Function Prototype: void swap(stack&)
+  
    Functionality: swaps a stacks values with the other stacks values
    Actual Implementation:
 
