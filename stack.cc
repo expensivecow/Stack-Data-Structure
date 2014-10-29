@@ -4,49 +4,38 @@
  */
 
 #include <iostream>
-#include "unit.h"
-#include <sstream>
+#include "stack.h"
 
-#define SETSIZE 10
-
-typedef int Index;
-
-struct Stack{
-  Index top;
-  int arr[SETSIZE];
-};
-
-bool empty(int arr[]) {
-  return false;
-}
-
-int size(int arr[]) {
-  return 0;
-}
-
-int top(int arr[]) {
-  return 0;
-}
-
-void push(int Value) {
+myStack::myStack(int startingTop, int startingLength) {
+  topIndex = startingTop;
+  maxSize = startingLength;
+  p = new int[startingLength];
   return;
 }
 
-int pop() {
+bool myStack::empty(int arr[]) {
+  return false;
+}
+
+int myStack::size(int arr[]) {
   return 0;
 }
 
-void runTests() {
-  //TODO: implement test cases
-  Unit unit;
-  unit.assertEquals("Failure",pop(),2);
+int myStack::top() {
+  return topIndex;
 }
 
-int main(int argc, char *argv[]) {
-    if(argc == 1) {
-      runTests();
-    } else {
-      std::cout << "TO IMPLEMENT LATER" << std::endl;
-    }
-    return 0;
+void myStack::push(int val) {
+  p[topIndex] = val;
+  topIndex++;
+  return;
 }
+
+int myStack::pop() {
+  return 1;
+}
+
+void myStack::reSize() {
+  return;
+}
+
