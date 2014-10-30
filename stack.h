@@ -15,6 +15,7 @@ public:
   void reSize(int);
   void displayStack();
   int getMaxSize();
+  int* returnArr();
   
 private:
   int* p;

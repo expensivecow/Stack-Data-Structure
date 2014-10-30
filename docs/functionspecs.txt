@@ -69,7 +69,15 @@ Methods to implement:
 
    Actual Implementation: Return maxSize
 
-6. swap()
+9. returnArr()
+
+   Function Prototype: int* returnArr()
+
+   Functionality: Returns pointer to the array that represents a stack from bottom to top
+
+   Actual Implementation: Returns p
+
+10. swap()
 
    Function Prototype: void swap(stack&)
   
