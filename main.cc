@@ -26,12 +26,12 @@ void runTests() {
   unit.assertEquals("top() on an array with values should return the last value(#6)", stack.top(), 4);
 
   int *expected = new int[1];
-  expected[0] = 1;
+  expected[0] = 8;
 
   secondStack.push(8);
   unit.assertpointerEquals("Pushing value onto empty array gives it a value(#7)", expected, secondStack.returnArr(), 1);
 
-  unit.assertEquals("Popping character off non-empty array should return a value(#8)", stack.pop(), 4);
+  unit.assertEquals("Popping character off non-empty array should return a value(#8)", 8, secondStack.pop());
 
   secondStack.pop(); //not sure if i have to catch the value or not
 
