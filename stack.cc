@@ -13,16 +13,16 @@ myStack::myStack(int startingTop, int startingLength) {
   return;
 }
 
-bool myStack::empty(int arr[]) {
+bool myStack::empty() {
   return (topIndex == 0? true:false);
 }
 
-int myStack::size(int arr[]) {
-  return 0;
+int myStack::size() {
+  return topIndex;
 }
 
 int myStack::top() {
-  return p[topIndex];
+  return p[topIndex-1];
 }
 
 void myStack::push(int val) {
@@ -35,7 +35,14 @@ void myStack::push(int val) {
 }
 
 int myStack::pop() {
-  return 0;
+  if(topIndex == 0) {
+    std::cout << "The stack is empty" << std::endl;
+    return 0;
+  } else {
+    int topVal = p[topIndex-1];
+    topIndex--;
+    return topVal;
+  }
 }
 
 void myStack::reSize(int capacity) {

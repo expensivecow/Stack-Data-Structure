@@ -7,8 +7,8 @@ class myStack {
 public:
   myStack(int, int); //constructor
 
-  bool empty(int[]);
-  int size(int[]);
+  bool empty();
+  int size();
   int top();
   void push(int);
   int pop();
