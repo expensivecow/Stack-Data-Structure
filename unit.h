@@ -13,6 +13,7 @@ public:
 	void assertvectorEquals(std::string msg, std::vector<int>& expected, std::vector<int>& actual);
 	void assertNonNull(std::string msg, void* actual);
 	void assertNull(std::string msg, void* actual);
+	void assertpointerEquals(std::string msg, int* expected, int* actual, int n);
 	void printResults();
 
 private:
