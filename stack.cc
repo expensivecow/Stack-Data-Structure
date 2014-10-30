@@ -28,7 +28,6 @@ int myStack::top() {
 void myStack::push(int val) {
   if(topIndex == maxSize) {
     reSize(2*maxSize);
-    std::cout << std::endl << maxSize << std::endl;
   }
   p[topIndex] = val;
   topIndex++;
@@ -62,4 +61,8 @@ void myStack::displayStack() {
 
 int myStack::getMaxSize() {
   return maxSize;
+}
+
+int* myStack::returnArr() {
+  return p;
 }
