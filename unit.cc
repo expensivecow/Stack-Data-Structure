@@ -16,6 +16,22 @@ void Unit::assertEquals(std::string msg, int expected, int actual) {
   }
 }
 
+void Unit::assertTrue(std::string msg, bool expected) {
+  std::stringstream fmt;
+  if (expected != true) {
+    fmt << msg << " :" << " Expected true got false" << std::endl;
+    failures.push_back(fmt.str());
+  }
+}
+
+void Unit::assertFalse(std::string msg, bool expected) {
+  std::stringstream fmt;
+  if(expected != false) {
+    fmt << msg << " :" << " Expected false got true" << std::endl;
+    failures.push_back(fmt.str());
+  }
+}
+
 void Unit::assertvectorEquals(std::string msg, std::vector<int>& expected, std::vector<int>& actual) {
   bool fail = expected.size() != actual.size();
   for(unsigned int i=0; i < expected.size() && !fail; i++) {
